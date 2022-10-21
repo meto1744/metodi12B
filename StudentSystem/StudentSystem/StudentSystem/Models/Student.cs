@@ -5,31 +5,35 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StudentSystems.models
+namespace StudentSystem
 {
-    class Student
+    public class Student
     {
         public Student()
         {
             this.StudentCourses = new HashSet<StudentCourse>();
+            this.HomeworkSubmissions = new HashSet<HomeworkSubmission>();
         }
-        public int id { get; set; }
 
+        public int StudentId { get; set; }
+        [Required]
+        
+        public string Name { get; set; }
         [Required]
         [MaxLength(100)]
-        public string Name { get; set; }
 
-        [Required]
+        public int PhoneNumber { get; set; }
         [MaxLength(10)]
         [MinLength(10)]
 
-        public int PhoneNumber { get; set; }
-
         
-
         public DateTime RegisteredOn { get; set; }
+        [Required]
 
         public DateTime Birthday { get; set; }
+        
+
         public ICollection<StudentCourse> StudentCourses { get; set; }
+        public ICollection<HomeworkSubmission> HomeworkSubmissions { get; set; }
     }
 }
