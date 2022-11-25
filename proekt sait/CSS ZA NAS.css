@@ -1,0 +1,29 @@
+body
+{
+  background-color: rgb(81, 220, 255);
+}
+
+nav
+{
+    background-color: lightseagreen;
+    margin: 20 0 0 0;
+    text-align: center;
+    
+}
+li
+{
+  color:cadetblue;
+  display: inline-block;
+  padding: 8px;
+}
+а:link
+{
+    color: cyan;
+    text-decoration:solid;
+}
+a:hover
+{
+  color: rgb(76, 155, 129);
+  background-color: aquamarine;
+}
+
